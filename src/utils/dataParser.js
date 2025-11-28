@@ -83,9 +83,11 @@ export function parseData(buffer, dataType) {
         value = dataView.getUint32(offset, true)
         break
       case 'int64':
+        // Note: Converting BigInt to Number may lose precision for values > 2^53 - 1
         value = Number(dataView.getBigInt64(offset, true))
         break
       case 'uint64':
+        // Note: Converting BigInt to Number may lose precision for values > 2^53 - 1
         value = Number(dataView.getBigUint64(offset, true))
         break
       case 'float16':
@@ -245,6 +247,7 @@ export function compareData(data1, data2) {
       totalAbsDiff,
       maxAbsDiff,
       maxRelDiff,
+      // Mean of absolute differences among differing elements only
       meanAbsDiff: diffCount > 0 ? totalAbsDiff / diffCount : 0
     }
   }

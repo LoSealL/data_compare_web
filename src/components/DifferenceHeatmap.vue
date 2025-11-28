@@ -68,7 +68,9 @@ const props = defineProps({
 
 const heatmapContainer = ref(null)
 const containerWidth = ref(800)
-const maxCells = 10000 // Limit cells for performance
+// Limit cells for performance - displaying more cells can cause browser slowdown
+// This limit provides good visualization while maintaining responsiveness
+const maxCells = 10000
 
 onMounted(() => {
   updateContainerWidth()

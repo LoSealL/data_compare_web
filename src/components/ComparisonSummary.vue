@@ -46,7 +46,7 @@
         <span class="metric-value">{{ formatNumber(summary.maxAbsDiff) }}</span>
       </div>
       <div class="metric">
-        <span class="metric-label">Mean Abs Diff:</span>
+        <span class="metric-label">Mean Abs Diff (of diffs):</span>
         <span class="metric-value">{{ formatNumber(summary.meanAbsDiff) }}</span>
       </div>
       <div class="metric">
