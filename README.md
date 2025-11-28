@@ -2,6 +2,10 @@
 
 A Vue 3 + Vite web application for comparing numerical data between two binary files.
 
+## Demo
+
+Visit the live demo at: https://loseal.github.io/data_compare_web/
+
 ## Features
 
 - **Drag & Drop File Upload**: Easily upload two files for comparison
@@ -52,6 +56,14 @@ npm run build
 ```bash
 npm run preview
 ```
+
+## Deployment
+
+This project includes a GitHub Actions workflow that automatically builds and deploys the app to GitHub Pages when changes are pushed to the `main` branch.
+
+To enable GitHub Pages:
+1. Go to your repository Settings → Pages
+2. Under "Build and deployment", select "GitHub Actions" as the source
 
 ## Usage
 
